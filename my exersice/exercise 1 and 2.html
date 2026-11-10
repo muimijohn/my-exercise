@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Exercise - HTML Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        
+        .exercise-container {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        /* Exercise 1 Styles */
+        
+        .stock-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .stock-table th,
+        .stock-table td {
+            border: 1px solid #000000;
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        
+        .table-title {
+            text-align: center;
+            font-size: 28px;
+            font-style: italic;
+            font-weight: bold;
+            padding: 15px;
+        }
+        
+        .header-name {
+            color: #d9534f;
+            font-weight: bold;
+        }
+        
+        .header-symbol {
+            background-color: deep cyan;
+            color: white;
+            font-weight: normal;
+        }
+        
+        .header-images {
+            background-color: green;
+            color: red;
+            font-weight: normal;
+        }
+        
+        .header-contact {
+            background-color: #27803b;
+            color: red;
+            font-weight: normal;
+        }
+        
+        .green-top-bar {
+            border-top: 4px solid #27803b !important;
+        }
+        
+        .table-footer {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 15px !important;
+        }
+        
+        .stock-table img {
+            display: block;
+            margin: 0 auto;
+            max-width: 120px;
+            height: auto;
+        }
+        
+        .stock-table ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .stock-table ol {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+        }
+        /* Exercise 2 Styles */
+        
+        .form-outer-wrapper {
+            border: 3px solid #0056b3;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-step {
+            text-align: center;
+            color: #0056b3;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+        
+        fieldset {
+            border: 1px solid #a0a0a0;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            padding: 15px 20px;
+        }
+        
+        legend {
+            font-size: 14px;
+            padding: 0 10px;
+            color: #333;
+        }
+        
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        
+        .form-group label {
+            width: 160px;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group select {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #a0a0a0;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        .radio-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        
+        .form-footer {
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            font-size: 12px;
+            border-radius: 0 0 8px 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- EXERCISE 1: TECH STOCK PICK TABLE -->
+    <div class="exercise-container">
+        <h2>Exercise 1: Tech Stock Table</h2>
+        <table class="stock-table">
+            <thead>
+                <tr>
+                    <th colspan="4" class="table-title">My tech stock pick</th>
+                </tr>
+                <tr>
+                    <th class="header-name">Name</th>
+                    <th class="header-symbol green-top-bar">Symbol</th>
+                    <th class="header-images">Images</th>
+                    <th class="header-contact green-top-bar">Contact</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Microsofti</td>
+                    <td>MSFT</td>
+                    <td>
+                        <!-- Replace src with your local image path as needed -->
+                        <img src="Laptop.jpg" alt="Laptop" height="20px">
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Email: microsofti@mc.se</li>
+                            <li>&copy;2013 <strong>Microsoft Corporation</strong></li>
+                        </ul>
+                        <ol type="i">
+                            <li>Email: microsofti@mc.se</li>
+                            <li>&copy;2026 <strong>Microsoft Corporation</strong></li>
+                        </ol>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cisco Systems</td>
+                    <td>CSCO</td>
+                    <td>
+                        <!-- Replace src with your local image path as needed -->
+                        <img src="Router.jpg" alt="Switch Router" height="20px">
+                    </td>
+                    <td>
+                        Switch<br>
+                        <a href="http://hardware.info" target="_blank" style="color: blue; text-decoration: underline;">www.uk.hardware.info</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="table-footer">&copy;BIT 202</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- EXERCISE 2: REGISTRATION INTERFACE FORM -->
+    <div class="exercise-container">
+        <h2>Exercise 2: Interface Form</h2>
+        <div class="form-outer-wrapper">
+            <div class="form-step">Step 1 of 5</div>
+
+            <form action="#" method="post">
+                <!-- Personal Information Section -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <div class="form-group">
+                        <label for="surname">Sur Name</label>
+                        <input type="text" id="surname" name="surname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="othernames">Other Names</label>
+                        <input type="text" id="othernames" name="othernames">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="radio-group">
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label Bars for="male" style="width:auto; margin-right:10px;">Male</label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female" style="width:auto;">Female</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="marital-status">Marital Status</label>
+                        <select id="marital-status" name="marital_status">
+                            <option value="">Select - Status</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pob">Place of Birth</label>
+                        <input type="text" id="pob" name="pob">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mothers-name">Mothers Name</label>
+                        <input type="text" id="mothers-name" name="mothers_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="fathers-name">fathers Name</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="Number of Dependants">Number of Dependants</label>
+                        <select id="Number of Dependants" name="Number of dependants">
+                            <option value="">select-Number of Dependants</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class=form-group>
+                        <label for="Level of Education ">Level of Education</label>
+                        <input type="text" id="Level of Education">
+                    </div>
+                    <fieldset>
+                        <legend>security information</legend>
+                        <div class="form-group">
+                            <label for="User Name">User Name</label>
+                            <input type="text" id="User Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="Password">Password</label>
+                            <input type="password" id="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="Retype Password">Retype Password</label>
+                            <input type="password" id="Retype Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="security question">Security question</label>
+                            <select id="security question" name="security question">
+                                    <option value="">select security question</option>
+                                    <option value="what is your name">what is your name</option>
+                                    <option value="where do you come from">where do you come from</option>
+                                    <option value="which is your favourite color">which is your favourite color</option>
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="Answer">Answer</label>
+                            <input type="text" id="Answer">
+                        </div>
+                        <fieldset>
+                            <!--form navigation buttons-->
+
+
+                            <div class="button-group">
+                                <button type="button" class="btn">previous</button>
+                                <button type="button" class="btn">next</button>
+                            </div>
+                        </fieldset>
+                        <!--copyright footer-->
+                        <div class="footer">
+                            copyright@ 2011 all rights reserved
+                        </div>
